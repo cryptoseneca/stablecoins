@@ -89,8 +89,9 @@ export function SovereignComparison() {
       </div>
 
       <p className="text-xs text-muted mt-6 pt-4 border-t border-border">
-        Sovereign data from US Treasury International Capital (TIC) System.
-        Stablecoin data from issuer attestations.
+        Sovereign figures include all Treasury types (bills, notes, bonds).
+        Stablecoins hold primarily T-Bills—comparing bills only, they&apos;d rank
+        even higher.
       </p>
     </div>
   );
