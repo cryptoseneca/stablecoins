@@ -108,7 +108,7 @@ export function NetFlows({ data, stablecoins }: NetFlowsProps) {
 
   return (
     <div className="bg-card border border-border rounded-lg p-6">
-      <div className="flex items-start justify-between mb-4">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
         <div>
           <p className="text-sm text-muted uppercase tracking-wide mb-1">
             Net Stablecoin Flows
