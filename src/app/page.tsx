@@ -2,6 +2,7 @@ import { SupplyChart } from "@/components/SupplyChart";
 import { NetFlows } from "@/components/NetFlows";
 import { TreasuryHoldings } from "@/components/TreasuryHoldings";
 import { SovereignComparison } from "@/components/SovereignComparison";
+import { TBillShare } from "@/components/TBillShare";
 import {
   getAllStablecoins,
   getStablecoinHistory,
@@ -122,7 +123,10 @@ export default async function Home() {
           <NetFlows data={chartData} stablecoins={stablecoins} />
           <TreasuryHoldings />
         </div>
-        <SovereignComparison />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <TBillShare />
+          <SovereignComparison />
+        </div>
       </main>
     </div>
   );
