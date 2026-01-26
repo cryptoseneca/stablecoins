@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "Macro analysis through the 4Fs framework",
     images: [
       {
-        url: "/og.svg",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "fiat.markets - Stablecoin macro dashboard",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "fiat.markets",
     description: "Macro analysis through the 4Fs framework",
-    images: ["/og.svg"],
+    images: ["/og.png"],
   },
 };
 
