@@ -97,12 +97,6 @@ export default async function Home() {
               Macro analysis through the 4Fs framework
             </p>
           </div>
-          <nav className="flex items-center gap-6 text-sm">
-            <span className="font-medium">Overview</span>
-            <span className="text-muted">Treasury Flows</span>
-            <span className="text-muted">Regulatory</span>
-            <span className="text-muted">Research</span>
-          </nav>
           <span className="text-xs text-muted">Updated {lastUpdated}</span>
         </div>
       </header>
