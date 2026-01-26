@@ -93,11 +93,21 @@ export default async function Home() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div>
             <h1 className="text-xl font-semibold">fiat.markets</h1>
-            <p className="text-sm text-muted hidden sm:block">macro</p>
+            <p className="text-sm text-muted hidden sm:block">
+              macro analysis through the{" "}
+              <a
+                href="https://x.com/BenKizemchuk/status/1919474917738762471"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-foreground"
+              >
+                4Fs framework
+              </a>
+            </p>
           </div>
           <span className="text-xs text-muted">
             <span className="hidden sm:inline">Updated {lastUpdated}</span>
-            <span className="sm:hidden">{new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" })}</span>
+            <span className="sm:hidden">Updated on {new Date().toLocaleDateString("en-US", { month: "numeric", day: "numeric", year: "2-digit" })}</span>
           </span>
         </div>
       </header>
