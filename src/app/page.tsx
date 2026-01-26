@@ -115,11 +115,11 @@ export default async function Home() {
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-6 py-8 space-y-6">
         <SupplyChart data={chartData} stablecoins={stablecoins} />
-        <NetFlows data={chartData} stablecoins={stablecoins} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <NetFlows data={chartData} stablecoins={stablecoins} />
           <TreasuryHoldings />
-          <SovereignComparison />
         </div>
+        <SovereignComparison />
       </main>
     </div>
   );
