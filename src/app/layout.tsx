@@ -13,6 +13,24 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.svg",
   },
+  openGraph: {
+    title: "fiat.markets",
+    description: "Macro analysis through the 4Fs framework",
+    images: [
+      {
+        url: "/og.svg",
+        width: 1200,
+        height: 630,
+        alt: "fiat.markets - Stablecoin macro dashboard",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "fiat.markets",
+    description: "Macro analysis through the 4Fs framework",
+    images: ["/og.svg"],
+  },
 };
 
 export default function RootLayout({
