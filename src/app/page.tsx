@@ -91,19 +91,22 @@ export default async function Home() {
       {/* Header */}
       <header className="border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-semibold">fiat.markets</h1>
-            <p className="text-sm text-muted">
-              macro analysis through the{" "}
-              <a
-                href="https://x.com/BenKizemchuk/status/1919474917738762471"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-foreground"
-              >
-                4Fs framework
-              </a>
-            </p>
+          <div className="flex items-center gap-3">
+            <img src="/logo.svg" alt="fiat.markets logo" className="w-8 h-8" />
+            <div>
+              <h1 className="text-xl font-semibold">fiat.markets</h1>
+              <p className="text-sm text-muted">
+                macro analysis through the{" "}
+                <a
+                  href="https://x.com/BenKizemchuk/status/1919474917738762471"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-foreground"
+                >
+                  4Fs framework
+                </a>
+              </p>
+            </div>
           </div>
           <span className="text-xs text-muted">
             <span className="hidden sm:inline">Updated {lastUpdated}</span>

@@ -8,8 +8,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Stablecoin Monitor",
+  title: "fiat.markets",
   description: "Macro analysis through the 4Fs framework",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
