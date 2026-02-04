@@ -31,6 +31,7 @@ export function StablecoinPipeline() {
   const dragStartX = useRef(0);
   const scrollStartX = useRef(0);
   const userScrollTimeout = useRef<NodeJS.Timeout | null>(null);
+  const isProgrammaticScroll = useRef(false);
 
   const handleImgError = (name: string) => {
     setImgErrors((prev) => new Set(prev).add(name));
@@ -52,8 +53,10 @@ export function StablecoinPipeline() {
       const scrollAmount = (pixelsPerSecond * deltaTime) / 1000;
 
       if (container.scrollLeft >= container.scrollWidth / 2) {
+        isProgrammaticScroll.current = true;
         container.scrollLeft = 0;
       }
+      isProgrammaticScroll.current = true;
       container.scrollLeft += scrollAmount;
       animationId = requestAnimationFrame(animate);
     };
@@ -100,6 +103,10 @@ export function StablecoinPipeline() {
 
   // Touch/wheel scroll detection
   const handleScroll = () => {
+    if (isProgrammaticScroll.current) {
+      isProgrammaticScroll.current = false;
+      return;
+    }
     if (!isDragging) {
       setIsUserScrolling(true);
       if (userScrollTimeout.current) clearTimeout(userScrollTimeout.current);
