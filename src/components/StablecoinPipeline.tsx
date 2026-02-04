@@ -122,9 +122,9 @@ export function StablecoinPipeline() {
           Stablecoin Pipeline
         </p>
         <div className="flex items-baseline gap-3 flex-wrap">
-          <span className="text-4xl font-semibold">{formatWeight(totalCompanyMcap)}</span>
+          <span className="text-4xl font-semibold">{formatWeight(totalCompanyMcap)}+</span>
           <span className="text-sm text-muted">
-            combined market cap across {PIPELINE_DATA.length} players building stablecoins
+            the combined market cap of companies now building stablecoins
           </span>
         </div>
       </div>

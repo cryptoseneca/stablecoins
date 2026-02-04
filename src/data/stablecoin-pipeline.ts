@@ -51,7 +51,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "JPMorgan",
     ticker: "JPMD",
     stablecoin_mcap_m: null,
-    company_mcap_m: 750000,
+    company_mcap_m: 700000, // Feb 2026
     weight_m: 2548000,
     weight_type: "customer_deposits",
     category: "TradFi",
@@ -124,7 +124,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Visa",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 650000,
+    company_mcap_m: 560000, // Feb 2026
     weight_m: 15700000,
     weight_type: "annualized_volume",
     category: "Payments Network",
@@ -166,7 +166,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "PayPal",
     ticker: "PYUSD",
     stablecoin_mcap_m: 850,
-    company_mcap_m: 90000,
+    company_mcap_m: 85000, // Feb 2026
     weight_m: 35000,
     weight_type: "customer_balances",
     category: "Fintech",
@@ -223,7 +223,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Amazon",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 2200000,
+    company_mcap_m: 2490000, // Feb 2026
     weight_m: 700000,
     weight_type: "marketplace_gmv",
     category: "BigTech",
@@ -237,7 +237,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Walmart",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 750000,
+    company_mcap_m: 1000000, // Hit $1T Feb 2026
     weight_m: 648000,
     weight_type: "annual_revenue",
     category: "BigTech",
@@ -251,7 +251,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Meta",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 1500000,
+    company_mcap_m: 1560000, // Feb 2026
     weight_m: 100000,
     weight_type: "estimated_potential",
     category: "BigTech",
@@ -308,7 +308,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Ripple",
     ticker: "RLUSD",
     stablecoin_mcap_m: 300,
-    company_mcap_m: 100000, // XRP mcap
+    company_mcap_m: 110000, // XRP mcap Feb 2026
     weight_m: 300,
     weight_type: "stablecoin_mcap",
     category: "Crypto",
