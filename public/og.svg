@@ -2,77 +2,56 @@
   <defs>
     <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#ffd700" stop-opacity="1"/>
-      <stop offset="50%" stop-color="#d4a700" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#d4a700" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#1a2744" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#243656" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#1a2744" stop-opacity="1"/>
-    </radialGradient>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
-
+  
   <!-- Background -->
-  <rect width="1200" height="630" fill="url(#bgGlow)"/>
-
-  <!-- Subtle grid pattern -->
-  <g stroke="#2a3a5a" stroke-width="1" opacity="0.3">
-    <line x1="0" y1="157" x2="1200" y2="157"/>
-    <line x1="0" y1="315" x2="1200" y2="315"/>
-    <line x1="0" y1="473" x2="1200" y2="473"/>
-    <line x1="300" y1="0" x2="300" y2="630"/>
-    <line x1="600" y1="0" x2="600" y2="630"/>
-    <line x1="900" y1="0" x2="900" y2="630"/>
-  </g>
-
-  <!-- Logo on left side -->
-  <g transform="translate(180, 315)">
+  <rect width="1200" height="630" fill="#1a2744"/>
+  
+  <!-- Gold block covering right side - angled edge -->
+  <path d="M700,0 Q580,315 700,630 L1200,630 L1200,0 Z" fill="#d4a700"/>
+  
+  <!-- Logo mark on the gold side -->
+  <g transform="translate(920, 315)">
     <!-- Lines -->
-    <g stroke="#d4a700" stroke-width="3" stroke-linecap="round">
+    <g stroke="#ffd700" stroke-width="3" stroke-linecap="round" opacity="0.6">
       <line x1="0" y1="0" x2="0" y2="-100"/>
       <line x1="0" y1="0" x2="100" y2="0"/>
       <line x1="0" y1="0" x2="0" y2="100"/>
       <line x1="0" y1="0" x2="-100" y2="0"/>
     </g>
-
+    
     <!-- Outer nodes -->
-    <g fill="#d4a700">
+    <g fill="#ffd700" opacity="0.5">
       <circle cx="0" cy="-100" r="14"/>
       <circle cx="100" cy="0" r="14"/>
       <circle cx="0" cy="100" r="14"/>
       <circle cx="-100" cy="0" r="14"/>
     </g>
-
-    <!-- Inner node highlights -->
-    <g fill="#ffd700">
+    
+    <!-- Inner highlights -->
+    <g fill="#ffd700" opacity="0.3">
       <circle cx="0" cy="-100" r="8"/>
       <circle cx="100" cy="0" r="8"/>
       <circle cx="0" cy="100" r="8"/>
       <circle cx="-100" cy="0" r="8"/>
     </g>
-
-    <!-- Center glow -->
-    <circle cx="0" cy="0" r="40" fill="url(#centerGlow)" filter="url(#glow)"/>
-    <circle cx="0" cy="0" r="26" fill="#ffd700" filter="url(#glow)"/>
-    <circle cx="0" cy="0" r="20" fill="#ffd700"/>
+    
+    <!-- Center -->
+    <circle cx="0" cy="0" r="26" fill="#ffd700" opacity="0.5"/>
+    <circle cx="0" cy="0" r="18" fill="#ffd700" opacity="0.3"/>
   </g>
-
-  <!-- Text -->
-  <g fill="#ffffff">
-    <text x="340" y="320" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="72" font-weight="700" letter-spacing="-2">fiat<tspan fill="#d4a700">.</tspan>markets</text>
-  </g>
-
+  
+  <!-- Brand name - left side -->
+  <text x="80" y="340" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="600" letter-spacing="-2" fill="#ffffff">fiat<tspan fill="#d4a700">.</tspan>markets</text>
+  
 </svg>
