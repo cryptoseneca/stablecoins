@@ -124,7 +124,7 @@ export function StablecoinPipeline() {
         onMouseLeave={handleMouseLeave}
         onScroll={handleScroll}
       >
-        <div className="flex gap-14">
+        <div className="flex gap-14 pl-[12%]">
           {[...sortedData, ...sortedData].map((entry, i) => {
             const logoUrl = getLogoUrl(entry);
             const showLogo = logoUrl && !imgErrors.has(entry.name + i);
