@@ -42,7 +42,7 @@ export function StablecoinPipeline() {
     if (!container || isUserScrolling) return;
 
     let animationId: number;
-    const scrollSpeed = 1; // pixels per frame
+    const scrollSpeed = 0.5; // pixels per frame (smoother)
 
     const animate = () => {
       if (container.scrollLeft >= container.scrollWidth / 2) {
@@ -132,7 +132,7 @@ export function StablecoinPipeline() {
         onMouseLeave={handleMouseLeave}
         onScroll={handleScroll}
       >
-        <div className="flex gap-14 pl-[12%]">
+        <div className="flex gap-14 pl-[5%]">
           {[...sortedData, ...sortedData].map((entry, i) => {
             const logoUrl = getLogoUrl(entry);
             const showLogo = logoUrl && !imgErrors.has(entry.name + i);
