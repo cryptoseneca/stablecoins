@@ -3,7 +3,6 @@ import { NetFlows } from "@/components/NetFlows";
 import { TreasuryHoldings } from "@/components/TreasuryHoldings";
 import { SovereignComparison } from "@/components/SovereignComparison";
 import { TBillShare } from "@/components/TBillShare";
-import { StablecoinPipeline } from "@/components/StablecoinPipeline";
 import {
   getAllStablecoins,
   getStablecoinHistory,
@@ -128,7 +127,6 @@ export default async function Home() {
           <TBillShare />
           <SovereignComparison />
         </div>
-        <StablecoinPipeline />
       </main>
     </div>
   );
