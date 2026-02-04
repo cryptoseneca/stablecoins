@@ -42,18 +42,25 @@ export function StablecoinPipeline() {
     if (!container || isUserScrolling) return;
 
     let animationId: number;
-    const scrollSpeed = 0.5; // pixels per frame (smoother)
+    let lastTime = performance.now();
+    const pixelsPerSecond = 30; // smooth continuous speed
 
-    const animate = () => {
+    const animate = (currentTime: number) => {
+      const deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+
+      const scrollAmount = (pixelsPerSecond * deltaTime) / 1000;
+
       if (container.scrollLeft >= container.scrollWidth / 2) {
         container.scrollLeft = 0;
       }
-      container.scrollLeft += scrollSpeed;
+      container.scrollLeft += scrollAmount;
       animationId = requestAnimationFrame(animate);
     };
 
     // Small delay before starting auto-scroll
     const timeoutId = setTimeout(() => {
+      lastTime = performance.now();
       animationId = requestAnimationFrame(animate);
     }, 500);
 
