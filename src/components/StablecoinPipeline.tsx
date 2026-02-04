@@ -100,8 +100,9 @@ export function StablecoinPipeline() {
     }
   };
 
-  // Sort by company market cap descending for visual impact
-  const sortedData = [...PIPELINE_DATA].sort((a, b) => (b.company_mcap_m || 0) - (a.company_mcap_m || 0));
+  // Sort by company market cap, falling back to stablecoin mcap for crypto-native players
+  const getSortValue = (e: PipelineEntry) => e.company_mcap_m ?? e.stablecoin_mcap_m ?? 0;
+  const sortedData = [...PIPELINE_DATA].sort((a, b) => getSortValue(b) - getSortValue(a));
 
   // Calculate total company market cap for the header
   const totalCompanyMcap = PIPELINE_DATA.reduce((sum, e) => sum + (e.company_mcap_m || 0), 0);
