@@ -160,16 +160,8 @@ export function StablecoinPipeline() {
                     </span>
                   )}
                 </div>
-                <div className="text-center">
-                  <div className="text-sm font-medium truncate max-w-[100px]">
-                    {entry.name}
-                  </div>
-                  <div className="text-lg font-semibold text-foreground">
-                    {formatWeight(entry.weight_m)}
-                  </div>
-                  <div className="text-xs text-muted">
-                    {WEIGHT_TYPE_LABELS[entry.weight_type] || entry.weight_type}
-                  </div>
+                <div className="text-sm font-medium truncate max-w-25 text-center">
+                  {entry.name}
                 </div>
               </button>
             );
