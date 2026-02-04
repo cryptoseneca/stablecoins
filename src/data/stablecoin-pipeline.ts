@@ -455,7 +455,7 @@ export function getTotalWeight(): number {
 
 export function formatWeight(millions: number): string {
   if (millions >= 1000000) {
-    return `$${(millions / 1000000).toFixed(1)}T`;
+    return `$${Math.floor(millions / 1000000)}T`;
   }
   if (millions >= 1000) {
     return `$${(millions / 1000).toFixed(0)}B`;
