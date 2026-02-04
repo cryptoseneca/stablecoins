@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   PIPELINE_DATA,
   WEIGHT_TYPE_LABELS,
@@ -25,9 +25,72 @@ function getLogoUrl(entry: PipelineEntry) {
 export function StablecoinPipeline() {
   const [selectedEntry, setSelectedEntry] = useState<PipelineEntry | null>(null);
   const [imgErrors, setImgErrors] = useState<Set<string>>(new Set());
+  const [isUserScrolling, setIsUserScrolling] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const dragStartX = useRef(0);
+  const scrollStartX = useRef(0);
+  const userScrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const handleImgError = (name: string) => {
     setImgErrors((prev) => new Set(prev).add(name));
+  };
+
+  // Auto-scroll effect (pauses when user is scrolling)
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container || isUserScrolling) return;
+
+    let animationId: number;
+    const scrollSpeed = 0.5; // pixels per frame
+
+    const animate = () => {
+      if (container.scrollLeft >= container.scrollWidth / 2) {
+        container.scrollLeft = 0;
+      }
+      container.scrollLeft += scrollSpeed;
+      animationId = requestAnimationFrame(animate);
+    };
+
+    animationId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationId);
+  }, [isUserScrolling]);
+
+  // Mouse drag handlers
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setIsUserScrolling(true);
+    dragStartX.current = e.clientX;
+    scrollStartX.current = scrollRef.current?.scrollLeft || 0;
+    if (userScrollTimeout.current) clearTimeout(userScrollTimeout.current);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    const dx = e.clientX - dragStartX.current;
+    scrollRef.current.scrollLeft = scrollStartX.current - dx;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    // Resume auto-scroll after 3 seconds of inactivity
+    userScrollTimeout.current = setTimeout(() => setIsUserScrolling(false), 3000);
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      userScrollTimeout.current = setTimeout(() => setIsUserScrolling(false), 3000);
+    }
+  };
+
+  // Touch/wheel scroll detection
+  const handleScroll = () => {
+    if (!isDragging) {
+      setIsUserScrolling(true);
+      if (userScrollTimeout.current) clearTimeout(userScrollTimeout.current);
+      userScrollTimeout.current = setTimeout(() => setIsUserScrolling(false), 3000);
+    }
   };
 
   // Sort by company market cap descending for visual impact
@@ -52,8 +115,16 @@ export function StablecoinPipeline() {
       </div>
 
       {/* Floating marquee with edge fade */}
-      <div className="relative marquee-container">
-        <div className="flex gap-14 animate-marquee hover:[animation-play-state:paused]">
+      <div
+        ref={scrollRef}
+        className="relative marquee-container overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+        onScroll={handleScroll}
+      >
+        <div className="flex gap-14">
           {[...sortedData, ...sortedData].map((entry, i) => {
             const logoUrl = getLogoUrl(entry);
             const showLogo = logoUrl && !imgErrors.has(entry.name + i);
@@ -147,17 +218,6 @@ export function StablecoinPipeline() {
       )}
 
       <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 60s linear infinite;
-        }
         .marquee-container {
           mask-image: linear-gradient(
             to right,
@@ -173,6 +233,13 @@ export function StablecoinPipeline() {
             black 90%,
             transparent 100%
           );
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </div>
