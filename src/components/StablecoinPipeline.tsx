@@ -42,7 +42,7 @@ export function StablecoinPipeline() {
     if (!container || isUserScrolling) return;
 
     let animationId: number;
-    const scrollSpeed = 0.5; // pixels per frame
+    const scrollSpeed = 1; // pixels per frame
 
     const animate = () => {
       if (container.scrollLeft >= container.scrollWidth / 2) {
@@ -52,8 +52,15 @@ export function StablecoinPipeline() {
       animationId = requestAnimationFrame(animate);
     };
 
-    animationId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationId);
+    // Small delay before starting auto-scroll
+    const timeoutId = setTimeout(() => {
+      animationId = requestAnimationFrame(animate);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+      cancelAnimationFrame(animationId);
+    };
   }, [isUserScrolling]);
 
   // Mouse drag handlers
