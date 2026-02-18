@@ -32,8 +32,8 @@ async function getChartData(): Promise<{
   // Fetch all stablecoins
   const { peggedAssets } = await getAllStablecoins();
 
-  // Get top 5 stablecoins by market cap
-  const topStablecoins = getTopStablecoins(peggedAssets, 5);
+  // Get top 10 stablecoins by market cap
+  const topStablecoins = getTopStablecoins(peggedAssets, 10);
 
   // Build metadata with colors
   const stablecoinMeta: StablecoinMeta[] = topStablecoins.map((s, i) => ({

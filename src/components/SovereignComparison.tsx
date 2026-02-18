@@ -89,9 +89,10 @@ export function SovereignComparison() {
       </div>
 
       <p className="text-xs text-muted mt-6 pt-4 border-t border-border">
-        Sovereign figures include all Treasury types (bills, notes, bonds).
-        Stablecoins hold primarily T-Bills—comparing bills only, they&apos;d rank
-        even higher.
+        Dec 2025 TIC data. Sovereign figures include all Treasury types.{" "}
+        <a href="/holders" className="underline hover:text-foreground">
+          View full rankings &amp; sources &rarr;
+        </a>
       </p>
     </div>
   );

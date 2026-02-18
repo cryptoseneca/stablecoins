@@ -105,28 +105,30 @@ export const TREASURY_HOLDINGS: TreasuryHolding[] = [
 ];
 
 // Reference: Top sovereign holders of US Treasuries (for comparison)
+// Source: Treasury TIC data, December 2025 (released Feb 18, 2026)
+// https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.html
 export const SOVEREIGN_COMPARISON = [
-  { name: "Japan", holdings: 1203 },
-  { name: "UK", holdings: 889 },
-  { name: "China", holdings: 683 },
-  { name: "Belgium", holdings: 481 },
-  { name: "Canada", holdings: 472 },
-  { name: "Cayman Islands", holdings: 427 },
-  { name: "Luxembourg", holdings: 426 },
-  { name: "France", holdings: 376 },
-  { name: "Ireland", holdings: 340 },
-  { name: "Taiwan", holdings: 313 },
-  { name: "Switzerland", holdings: 300 },
-  { name: "Singapore", holdings: 272 },
-  { name: "Hong Kong", holdings: 256 },
-  { name: "Norway", holdings: 219 },
+  { name: "Japan", holdings: 1186 },
+  { name: "United Kingdom", holdings: 866 },
+  { name: "China", holdings: 684 },
+  { name: "Belgium", holdings: 477 },
+  { name: "Canada", holdings: 468 },
+  { name: "Luxembourg", holdings: 435 },
+  { name: "Cayman Islands", holdings: 421 },
+  { name: "France", holdings: 369 },
+  { name: "Ireland", holdings: 341 },
+  { name: "Taiwan", holdings: 311 },
+  { name: "Switzerland", holdings: 294 },
+  { name: "Singapore", holdings: 278 },
+  { name: "Hong Kong", holdings: 268 },
+  { name: "Norway", holdings: 208 },
   // Stablecoins would rank here (~$196B combined)
-  { name: "India", holdings: 187 },
-  { name: "Brazil", holdings: 168 },
-  { name: "Saudi Arabia", holdings: 149 },
-  { name: "South Korea", holdings: 145 },
-  { name: "Germany", holdings: 110 },
-  { name: "Israel", holdings: 108 },
+  { name: "India", holdings: 183 },
+  { name: "Brazil", holdings: 169 },
+  { name: "Saudi Arabia", holdings: 150 },
+  { name: "South Korea", holdings: 141 },
+  { name: "Israel", holdings: 106 },
+  { name: "Germany", holdings: 103 },
 ];
 
 export function getTotalTreasuryHoldings(): number {
