@@ -37,7 +37,7 @@ export const TREASURY_HOLDINGS: TreasuryHolding[] = [
     totalReserves: 5.3,
     treasuryPercent: 42,
     lastUpdated: "2025-01-01",
-    source: "1",
+    source: "https://makerburn.com/#/",
   },
   {
     symbol: "FDUSD",

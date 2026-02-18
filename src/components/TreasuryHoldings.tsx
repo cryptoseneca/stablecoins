@@ -97,25 +97,11 @@ export function TreasuryHoldings() {
         })}
       </div>
 
-      {/* Last updated */}
+      {/* Sources */}
       <p className="text-xs text-muted mt-4 pt-4 border-t border-border">
         Data from issuer attestations.{" "}
-        <a
-          href="https://tether.to/transparency/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline"
-        >
-          Tether
-        </a>
-        {" · "}
-        <a
-          href="https://www.circle.com/transparency"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline"
-        >
-          Circle
+        <a href="/treasury" className="underline hover:text-foreground">
+          View full breakdown &amp; sources &rarr;
         </a>
       </p>
     </div>
