@@ -14,10 +14,16 @@ export function TreasuryHoldings() {
   const total = getTotalTreasuryHoldings();
   const rank = getStablecoinRank();
 
-  // Sort by holdings descending
+  // Sort by holdings descending, filter out zero-holders for the bar chart
   const sorted = [...TREASURY_HOLDINGS].sort(
     (a, b) => b.treasuryHoldings - a.treasuryHoldings
   );
+  const withHoldings = sorted.filter((h) => h.treasuryHoldings > 0);
+
+  const colors = [
+    "#26A17B", "#2775CA", "#F5AC37", "#6366f1", "#8b5cf6",
+    "#ec4899", "#14b8a6", "#f97316", "#84cc16", "#ef4444",
+  ];
 
   return (
     <div className="bg-card border border-border rounded-lg p-6">
@@ -32,16 +38,15 @@ export function TreasuryHoldings() {
           </span>
         </div>
         <p className="text-sm text-muted mt-2">
-          Stablecoin issuers collectively hold more US debt than South Korea
+          Stablecoin issuers collectively hold more US debt than Saudi Arabia
         </p>
       </div>
 
       {/* Stacked bar visualization */}
       <div className="mb-4">
         <div className="flex h-8 rounded overflow-hidden">
-          {sorted.map((holding, i) => {
+          {withHoldings.map((holding, i) => {
             const width = (holding.treasuryHoldings / total) * 100;
-            const colors = ["#26A17B", "#2775CA", "#F5AC37", "#6366f1", "#8b5cf6"];
             return (
               <div
                 key={holding.symbol}
@@ -63,7 +68,6 @@ export function TreasuryHoldings() {
       {/* Breakdown table */}
       <div className="space-y-2">
         {sorted.map((holding, i) => {
-          const colors = ["#26A17B", "#2775CA", "#F5AC37", "#6366f1", "#8b5cf6"];
           const sharePercent = (holding.treasuryHoldings / total) * 100;
           return (
             <div
@@ -73,7 +77,7 @@ export function TreasuryHoldings() {
               <div className="flex items-center gap-2">
                 <div
                   className="w-2.5 h-2.5 rounded-sm"
-                  style={{ backgroundColor: colors[i % colors.length] }}
+                  style={{ backgroundColor: holding.treasuryHoldings > 0 ? colors[withHoldings.indexOf(holding) % colors.length] : "#374151" }}
                 />
                 <span>{holding.symbol}</span>
                 <span className="text-muted text-xs">

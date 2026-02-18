@@ -37,7 +37,7 @@ export const TREASURY_HOLDINGS: TreasuryHolding[] = [
     totalReserves: 5.3,
     treasuryPercent: 42,
     lastUpdated: "2025-01-01",
-    source: "https://makerburn.com/",
+    source: "1",
   },
   {
     symbol: "FDUSD",
@@ -57,6 +57,51 @@ export const TREASURY_HOLDINGS: TreasuryHolding[] = [
     lastUpdated: "2025-01-01",
     source: "https://sky.money/",
   },
+  {
+    symbol: "USD1",
+    name: "World Liberty Financial",
+    treasuryHoldings: 3.3,
+    totalReserves: 5.1,
+    treasuryPercent: 65,
+    lastUpdated: "2026-02-01",
+    source: "https://www.bitgo.com/usd1/attestations/",
+  },
+  {
+    symbol: "PYUSD",
+    name: "PayPal (Paxos)",
+    treasuryHoldings: 2.0,
+    totalReserves: 4.0,
+    treasuryPercent: 50,
+    lastUpdated: "2026-01-31",
+    source: "https://www.paxos.com/pyusd-transparency",
+  },
+  {
+    symbol: "RLUSD",
+    name: "Ripple",
+    treasuryHoldings: 0.95,
+    totalReserves: 1.59,
+    treasuryPercent: 60,
+    lastUpdated: "2026-02-12",
+    source: "https://ripple.com/solutions/stablecoin/transparency/",
+  },
+  {
+    symbol: "USDe",
+    name: "Ethena",
+    treasuryHoldings: 0,
+    totalReserves: 6.3,
+    treasuryPercent: 0,
+    lastUpdated: "2026-02-01",
+    source: "https://ethena.fi/",
+  },
+  {
+    symbol: "FIDD",
+    name: "Fidelity",
+    treasuryHoldings: 0.01,
+    totalReserves: 0.01,
+    treasuryPercent: 100,
+    lastUpdated: "2026-02-04",
+    source: "https://www.fidelitydigitalassets.com/stablecoin",
+  },
 ];
 
 // Reference: Top sovereign holders of US Treasuries (for comparison)
@@ -75,7 +120,7 @@ export const SOVEREIGN_COMPARISON = [
   { name: "Singapore", holdings: 272 },
   { name: "Hong Kong", holdings: 256 },
   { name: "Norway", holdings: 219 },
-  // Stablecoins would rank here (~$189B combined)
+  // Stablecoins would rank here (~$196B combined)
   { name: "India", holdings: 187 },
   { name: "Brazil", holdings: 168 },
   { name: "Saudi Arabia", holdings: 149 },
