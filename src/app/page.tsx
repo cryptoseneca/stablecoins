@@ -1,5 +1,6 @@
 // Data last updated: Feb 18, 2026
 import { SupplyChart } from "@/components/SupplyChart";
+import { SupplyTicker } from "@/components/SupplyTicker";
 import { NetFlows } from "@/components/NetFlows";
 import { TreasuryHoldings } from "@/components/TreasuryHoldings";
 import { SovereignComparison } from "@/components/SovereignComparison";
@@ -89,8 +90,25 @@ export default async function Home() {
     timeZoneName: "short",
   });
 
+  // Compute 24h supply changes for the ticker
+  const tickerItems = stablecoins.map((coin) => {
+    const latest = chartData[chartData.length - 1];
+    const prev = chartData[chartData.length - 2];
+    const currentSupply = latest?.[coin.symbol] ?? 0;
+    const prevSupply = prev?.[coin.symbol] ?? 0;
+    return {
+      symbol: coin.symbol,
+      color: coin.color,
+      change: currentSupply - prevSupply,
+      currentSupply,
+    };
+  });
+
   return (
     <div className="min-h-screen bg-background">
+      {/* Supply ticker */}
+      <SupplyTicker items={tickerItems} />
+
       {/* Header */}
       <header className="border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
