@@ -24,10 +24,10 @@ export const TREASURY_HOLDINGS: TreasuryHolding[] = [
   {
     symbol: "USDC",
     name: "Circle",
-    treasuryHoldings: 40,
-    totalReserves: 70.7,
+    treasuryHoldings: 42,
+    totalReserves: 73.5,
     treasuryPercent: 57,
-    lastUpdated: "2026-02-02",
+    lastUpdated: "2026-02-12",
     source: "https://www.circle.com/transparency",
   },
   {
@@ -61,27 +61,27 @@ export const TREASURY_HOLDINGS: TreasuryHolding[] = [
 
 // Reference: Top sovereign holders of US Treasuries (for comparison)
 export const SOVEREIGN_COMPARISON = [
-  { name: "Japan", holdings: 1100 },
-  { name: "China", holdings: 775 },
-  { name: "UK", holdings: 750 },
-  { name: "Luxembourg", holdings: 400 },
-  { name: "Canada", holdings: 350 },
-  { name: "Belgium", holdings: 330 },
-  { name: "Ireland", holdings: 310 },
-  { name: "Switzerland", holdings: 290 },
-  { name: "Cayman Islands", holdings: 285 },
-  { name: "Taiwan", holdings: 275 },
-  { name: "India", holdings: 245 },
-  { name: "Hong Kong", holdings: 230 },
-  { name: "Brazil", holdings: 225 },
-  { name: "Singapore", holdings: 210 },
-  { name: "France", holdings: 195 },
-  { name: "Saudi Arabia", holdings: 185 },
-  // Stablecoins would rank here (~$188B combined)
-  { name: "South Korea", holdings: 180 },
-  { name: "Germany", holdings: 175 },
-  { name: "Norway", holdings: 165 },
-  { name: "Mexico", holdings: 95 },
+  { name: "Japan", holdings: 1203 },
+  { name: "UK", holdings: 889 },
+  { name: "China", holdings: 683 },
+  { name: "Belgium", holdings: 481 },
+  { name: "Canada", holdings: 472 },
+  { name: "Cayman Islands", holdings: 427 },
+  { name: "Luxembourg", holdings: 426 },
+  { name: "France", holdings: 376 },
+  { name: "Ireland", holdings: 340 },
+  { name: "Taiwan", holdings: 313 },
+  { name: "Switzerland", holdings: 300 },
+  { name: "Singapore", holdings: 272 },
+  { name: "Hong Kong", holdings: 256 },
+  { name: "Norway", holdings: 219 },
+  // Stablecoins would rank here (~$189B combined)
+  { name: "India", holdings: 187 },
+  { name: "Brazil", holdings: 168 },
+  { name: "Saudi Arabia", holdings: 149 },
+  { name: "South Korea", holdings: 145 },
+  { name: "Germany", holdings: 110 },
+  { name: "Israel", holdings: 108 },
 ];
 
 export function getTotalTreasuryHoldings(): number {

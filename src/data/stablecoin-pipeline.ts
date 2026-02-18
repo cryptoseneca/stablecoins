@@ -22,23 +22,23 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 1,
     name: "Tether",
     ticker: "USDT",
-    stablecoin_mcap_m: 187000,
+    stablecoin_mcap_m: 184000,
     company_mcap_m: 100000, // Private, estimated from profits
-    weight_m: 187000,
+    weight_m: 184000,
     weight_type: "stablecoin_mcap",
     category: "Incumbent Issuer",
     type: "incumbent",
     status: "live",
     domain: "tether.to",
-    note: "Dominant player with 60%+ market share. $13B+ profit (2024). 18th largest holder of US Treasuries globally. 400M+ users across 48 blockchains."
+    note: "Dominant player with ~58% market share. $10B+ profit (2025). $141B in US Treasury exposure. 400M+ users across 48 blockchains."
   },
   {
     rank: 2,
     name: "Circle",
     ticker: "USDC",
-    stablecoin_mcap_m: 72000,
+    stablecoin_mcap_m: 74000,
     company_mcap_m: 9000, // IPO valuation
-    weight_m: 72000,
+    weight_m: 74000,
     weight_type: "stablecoin_mcap",
     category: "Incumbent Issuer",
     type: "incumbent",
@@ -51,7 +51,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "JPMorgan",
     ticker: "JPMD",
     stablecoin_mcap_m: null,
-    company_mcap_m: 700000, // Feb 2026
+    company_mcap_m: 824000, // Feb 2026
     weight_m: 2548000,
     weight_type: "customer_deposits",
     category: "TradFi",
@@ -65,23 +65,23 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 4,
     name: "Fidelity",
     ticker: "FIDD",
-    stablecoin_mcap_m: 0,
+    stablecoin_mcap_m: 10,
     company_mcap_m: 50000, // Private
     weight_m: 300000,
     weight_type: "brokerage_cash",
     category: "TradFi",
     type: "new",
-    status: "launching",
+    status: "just launched",
     date: "Feb 2026",
     domain: "fidelity.com",
-    note: "$4.9T AUM, ~$300B in client cash/money market balances. Testing stablecoin for fund settlements. 46M+ brokerage accounts. Fidelity Digital Assets custody arm."
+    note: "$4.9T AUM, ~$300B in client cash/money market balances. FIDD stablecoin launched Feb 4, 2026 on Ethereum. Backed by cash and short-term Treasuries. 46M+ brokerage accounts."
   },
   {
     rank: 5,
     name: "Barclays",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 50000,
+    company_mcap_m: 90000,
     weight_m: 650000,
     weight_type: "customer_deposits",
     category: "TradFi",
@@ -95,7 +95,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "BBVA",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 70000,
+    company_mcap_m: 135000,
     weight_m: 450000,
     weight_type: "customer_deposits",
     category: "TradFi",
@@ -109,7 +109,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "SocGen",
     ticker: "EURCV",
     stablecoin_mcap_m: null,
-    company_mcap_m: 30000,
+    company_mcap_m: 51000,
     weight_m: 550000,
     weight_type: "customer_deposits",
     category: "EU Banking",
@@ -124,7 +124,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Visa",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 560000, // Feb 2026
+    company_mcap_m: 635000, // Feb 2026
     weight_m: 15700000,
     weight_type: "annualized_volume",
     category: "Payments Network",
@@ -138,7 +138,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Mastercard",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 500000,
+    company_mcap_m: 463000,
     weight_m: 9000000,
     weight_type: "annualized_volume",
     category: "Payments Network",
@@ -152,21 +152,21 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Stripe / Bridge",
     ticker: "USDB",
     stablecoin_mcap_m: null,
-    company_mcap_m: 70000, // Private
+    company_mcap_m: 140000, // Private, Feb 2026 tender
     weight_m: 1400000,
     weight_type: "annualized_volume",
     category: "Payments Infra",
     type: "new",
     status: "live",
     domain: "stripe.com",
-    note: "$1T+ payment volume (2024). Acquired Bridge for $1.1B (largest crypto acquisition). Stablecoin APIs for 100+ countries. Powers SpaceX, Starlink payouts."
+    note: "$140B valuation (Feb 2026 tender). $1T+ payment volume. Acquired Bridge for $1.1B. Stablecoin APIs for 100+ countries. Powers SpaceX, Starlink payouts."
   },
   {
     rank: 11,
     name: "PayPal",
     ticker: "PYUSD",
-    stablecoin_mcap_m: 850,
-    company_mcap_m: 85000, // Feb 2026
+    stablecoin_mcap_m: 4000,
+    company_mcap_m: 38000, // Feb 2026
     weight_m: 35000,
     weight_type: "customer_balances",
     category: "Fintech",
@@ -174,7 +174,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     status: "live",
     date: "2023",
     domain: "paypal.com",
-    note: "~$35B in customer balances held. 434M active accounts. PYUSD at $850M mcap. $1.2B/yr interest earned on customer balances. Stablecoin = rewrapping existing float."
+    note: "~$35B in customer balances held. 434M active accounts. PYUSD at $4B mcap (3x growth). YouTube creator payouts in PYUSD. Cross-chain via LayerZero (Solana, Arbitrum)."
   },
   {
     rank: 12,
@@ -195,7 +195,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Robinhood",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 50000,
+    company_mcap_m: 68000,
     weight_m: 34200,
     weight_type: "cash_sweep_balances",
     category: "Fintech",
@@ -209,7 +209,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "SoFi",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 15000,
+    company_mcap_m: 25000,
     weight_m: 32900,
     weight_type: "customer_deposits",
     category: "Fintech",
@@ -223,7 +223,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Amazon",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 2490000, // Feb 2026
+    company_mcap_m: 2134000, // Feb 2026
     weight_m: 700000,
     weight_type: "marketplace_gmv",
     category: "BigTech",
@@ -237,7 +237,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Walmart",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 1000000, // Hit $1T Feb 2026
+    company_mcap_m: 1030000, // Hit $1T Feb 2026
     weight_m: 648000,
     weight_type: "annual_revenue",
     category: "BigTech",
@@ -251,7 +251,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Meta",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 1560000, // Feb 2026
+    company_mcap_m: 1690000, // Feb 2026
     weight_m: 100000,
     weight_type: "estimated_potential",
     category: "BigTech",
@@ -264,59 +264,59 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 18,
     name: "World Liberty Financial",
     ticker: "USD1",
-    stablecoin_mcap_m: 3400,
+    stablecoin_mcap_m: 5400,
     company_mcap_m: null, // Private, early stage
-    weight_m: 3400,
+    weight_m: 5400,
     weight_type: "stablecoin_mcap",
     category: "Political / DeFi",
     type: "new",
     status: "live",
     date: "Mar 2025",
     domain: "worldlibertyfinancial.com",
-    note: "Trump family-backed DeFi venture. USD1 stablecoin launched Mar 2025. Aave integration. Controversial but rapidly growing. OCC bank charter application pending."
+    note: "Trump family-backed DeFi venture. USD1 at $5.4B mcap — 5th largest stablecoin. Launched Mar 2025. Controversial but rapidly growing."
   },
   {
     rank: 19,
     name: "Sky (MakerDAO)",
     ticker: "USDS / DAI",
-    stablecoin_mcap_m: 8960,
+    stablecoin_mcap_m: 10960,
     company_mcap_m: 2000, // MKR token mcap
-    weight_m: 8960,
+    weight_m: 10960,
     weight_type: "stablecoin_mcap",
     category: "DeFi",
     type: "incumbent",
     status: "live",
     domain: "sky.money",
-    note: "USDS ($5.6B) + DAI ($3.36B) = $8.96B combined. Oldest decentralized stablecoin. Projecting $611M revenue in 2026 (+81% YoY)."
+    note: "USDS ($5.6B) + DAI ($5.36B) = $10.96B combined. Oldest decentralized stablecoin. USDS now 3rd largest stablecoin. Projecting $611M revenue in 2026 (+81% YoY)."
   },
   {
     rank: 20,
     name: "Ethena",
     ticker: "USDe",
-    stablecoin_mcap_m: 5400,
+    stablecoin_mcap_m: 6300,
     company_mcap_m: 3000, // ENA token mcap
-    weight_m: 5400,
+    weight_m: 6300,
     weight_type: "stablecoin_mcap",
     category: "DeFi",
     type: "new",
     status: "live",
     domain: "ethena.fi",
-    note: "$5.4B mcap. Synthetic delta-neutral stablecoin. 4th largest overall. Novel mechanism — captures funding rate spread."
+    note: "$6.3B mcap. Synthetic delta-neutral stablecoin. Novel mechanism — captures funding rate spread."
   },
   {
     rank: 21,
     name: "Ripple",
     ticker: "RLUSD",
-    stablecoin_mcap_m: 300,
-    company_mcap_m: 110000, // XRP mcap Feb 2026
-    weight_m: 300,
+    stablecoin_mcap_m: 1500,
+    company_mcap_m: 89000, // XRP mcap Feb 2026
+    weight_m: 1500,
     weight_type: "stablecoin_mcap",
     category: "Crypto",
     type: "new",
     status: "live",
     date: "Dec 2024",
     domain: "ripple.com",
-    note: "$300M+ mcap. XRP Ledger + Ethereum. Cross-border payment DNA. $11B XRP market cap as parent. Growing in LatAm and APAC corridors."
+    note: "$1.5B mcap (5x growth). XRP Ledger + Ethereum. Binance added RLUSD on XRPL. Cross-border payment DNA. $89B XRP market cap."
   },
   {
     rank: 22,
