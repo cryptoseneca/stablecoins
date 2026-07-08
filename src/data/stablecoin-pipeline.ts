@@ -22,9 +22,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 1,
     name: "Tether",
     ticker: "USDT",
-    stablecoin_mcap_m: 184192,
+    stablecoin_mcap_m: 184190,
     company_mcap_m: 100000, // Private, estimated from profits
-    weight_m: 184192,
+    weight_m: 184190,
     weight_type: "stablecoin_mcap",
     category: "Incumbent Issuer",
     type: "incumbent",
@@ -36,9 +36,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 2,
     name: "Circle",
     ticker: "USDC",
-    stablecoin_mcap_m: 73021,
+    stablecoin_mcap_m: 73184,
     company_mcap_m: 9000, // IPO valuation
-    weight_m: 73021,
+    weight_m: 73184,
     weight_type: "stablecoin_mcap",
     category: "Incumbent Issuer",
     type: "incumbent",
@@ -51,7 +51,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "JPMorgan",
     ticker: "JPMD",
     stablecoin_mcap_m: null,
-    company_mcap_m: 904925, // Feb 2026
+    company_mcap_m: 908944, // Feb 2026
     weight_m: 2548000,
     weight_type: "customer_deposits",
     category: "TradFi",
@@ -81,7 +81,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Barclays",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 95789,
+    company_mcap_m: 92418,
     weight_m: 650000,
     weight_type: "customer_deposits",
     category: "TradFi",
@@ -95,7 +95,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "BBVA",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 144871,
+    company_mcap_m: 144483,
     weight_m: 450000,
     weight_type: "customer_deposits",
     category: "TradFi",
@@ -124,7 +124,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Visa",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 679398, // Feb 2026
+    company_mcap_m: 669794, // Feb 2026
     weight_m: 15700000,
     weight_type: "annualized_volume",
     category: "Payments Network",
@@ -138,7 +138,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Mastercard",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 471039,
+    company_mcap_m: 469731,
     weight_m: 9000000,
     weight_type: "annualized_volume",
     category: "Payments Network",
@@ -165,8 +165,8 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 11,
     name: "PayPal",
     ticker: "PYUSD",
-    stablecoin_mcap_m: 2840,
-    company_mcap_m: 39774, // Feb 2026
+    stablecoin_mcap_m: 2824,
+    company_mcap_m: 40268, // Feb 2026
     weight_m: 35000,
     weight_type: "customer_balances",
     category: "Fintech",
@@ -195,7 +195,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Robinhood",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 105854,
+    company_mcap_m: 101667,
     weight_m: 34200,
     weight_type: "cash_sweep_balances",
     category: "Fintech",
@@ -209,7 +209,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "SoFi",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 23872,
+    company_mcap_m: 22769,
     weight_m: 32900,
     weight_type: "customer_deposits",
     category: "Fintech",
@@ -223,7 +223,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Amazon",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 2626456, // Feb 2026
+    company_mcap_m: 2646034, // Feb 2026
     weight_m: 700000,
     weight_type: "marketplace_gmv",
     category: "BigTech",
@@ -237,7 +237,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Walmart",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 880561, // Hit $1T Feb 2026
+    company_mcap_m: 887644, // Hit $1T Feb 2026
     weight_m: 648000,
     weight_type: "annual_revenue",
     category: "BigTech",
@@ -251,7 +251,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Meta",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 1523790, // Feb 2026
+    company_mcap_m: 1562603, // Feb 2026
     weight_m: 100000,
     weight_type: "estimated_potential",
     category: "BigTech",
@@ -264,9 +264,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 18,
     name: "World Liberty Financial",
     ticker: "USD1",
-    stablecoin_mcap_m: 4522,
+    stablecoin_mcap_m: 4471,
     company_mcap_m: null, // Private, early stage
-    weight_m: 4522,
+    weight_m: 4471,
     weight_type: "stablecoin_mcap",
     category: "Political / DeFi",
     type: "new",
@@ -279,9 +279,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 19,
     name: "Sky (MakerDAO)",
     ticker: "USDS / DAI",
-    stablecoin_mcap_m: 15663,
+    stablecoin_mcap_m: 15613,
     company_mcap_m: 2000, // MKR token mcap
-    weight_m: 15663,
+    weight_m: 15613,
     weight_type: "stablecoin_mcap",
     category: "DeFi",
     type: "incumbent",
@@ -293,9 +293,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 20,
     name: "Ethena",
     ticker: "USDe",
-    stablecoin_mcap_m: 4410,
+    stablecoin_mcap_m: 4400,
     company_mcap_m: 3000, // ENA token mcap
-    weight_m: 4410,
+    weight_m: 4400,
     weight_type: "stablecoin_mcap",
     category: "DeFi",
     type: "new",
@@ -307,9 +307,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 21,
     name: "Ripple",
     ticker: "RLUSD",
-    stablecoin_mcap_m: 1599,
+    stablecoin_mcap_m: 1582,
     company_mcap_m: 89000, // XRP mcap Feb 2026
-    weight_m: 1599,
+    weight_m: 1582,
     weight_type: "stablecoin_mcap",
     category: "Crypto",
     type: "new",
