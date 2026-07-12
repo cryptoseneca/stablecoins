@@ -22,9 +22,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 1,
     name: "Tether",
     ticker: "USDT",
-    stablecoin_mcap_m: 184173,
+    stablecoin_mcap_m: 184177,
     company_mcap_m: 100000, // Private, estimated from profits
-    weight_m: 184173,
+    weight_m: 184177,
     weight_type: "stablecoin_mcap",
     category: "Incumbent Issuer",
     type: "incumbent",
@@ -36,9 +36,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 2,
     name: "Circle",
     ticker: "USDC",
-    stablecoin_mcap_m: 73306,
+    stablecoin_mcap_m: 73390,
     company_mcap_m: 9000, // IPO valuation
-    weight_m: 73306,
+    weight_m: 73390,
     weight_type: "stablecoin_mcap",
     category: "Incumbent Issuer",
     type: "incumbent",
@@ -165,7 +165,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 11,
     name: "PayPal",
     ticker: "PYUSD",
-    stablecoin_mcap_m: 2857,
+    stablecoin_mcap_m: 2869,
     company_mcap_m: 40859, // Feb 2026
     weight_m: 35000,
     weight_type: "customer_balances",
@@ -209,7 +209,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "SoFi",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 24539,
+    company_mcap_m: 24090,
     weight_m: 32900,
     weight_type: "customer_deposits",
     category: "Fintech",
@@ -223,7 +223,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Amazon",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 2640548, // Feb 2026
+    company_mcap_m: 2639149, // Feb 2026
     weight_m: 700000,
     weight_type: "marketplace_gmv",
     category: "BigTech",
@@ -237,7 +237,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Walmart",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 905231, // Hit $1T Feb 2026
+    company_mcap_m: 906425, // Hit $1T Feb 2026
     weight_m: 648000,
     weight_type: "annual_revenue",
     category: "BigTech",
@@ -264,9 +264,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 18,
     name: "World Liberty Financial",
     ticker: "USD1",
-    stablecoin_mcap_m: 4457,
+    stablecoin_mcap_m: 4456,
     company_mcap_m: null, // Private, early stage
-    weight_m: 4457,
+    weight_m: 4456,
     weight_type: "stablecoin_mcap",
     category: "Political / DeFi",
     type: "new",
@@ -279,9 +279,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 19,
     name: "Sky (MakerDAO)",
     ticker: "USDS / DAI",
-    stablecoin_mcap_m: 15620,
+    stablecoin_mcap_m: 15606,
     company_mcap_m: 2000, // MKR token mcap
-    weight_m: 15620,
+    weight_m: 15606,
     weight_type: "stablecoin_mcap",
     category: "DeFi",
     type: "incumbent",
@@ -293,9 +293,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 20,
     name: "Ethena",
     ticker: "USDe",
-    stablecoin_mcap_m: 3974,
+    stablecoin_mcap_m: 3936,
     company_mcap_m: 3000, // ENA token mcap
-    weight_m: 3974,
+    weight_m: 3936,
     weight_type: "stablecoin_mcap",
     category: "DeFi",
     type: "new",
