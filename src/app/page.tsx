@@ -1,4 +1,4 @@
-// Data last updated: Aug 8, 2026
+// Data last updated: Aug 9, 2026
 import { SupplyChart } from "@/components/SupplyChart";
 import { SupplyTicker } from "@/components/SupplyTicker";
 import { NetFlows } from "@/components/NetFlows";
