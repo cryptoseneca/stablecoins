@@ -36,9 +36,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 2,
     name: "Circle",
     ticker: "USDC",
-    stablecoin_mcap_m: 71870,
+    stablecoin_mcap_m: 71853,
     company_mcap_m: 9000, // IPO valuation
-    weight_m: 71870,
+    weight_m: 71853,
     weight_type: "stablecoin_mcap",
     category: "Incumbent Issuer",
     type: "incumbent",
@@ -165,8 +165,8 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 11,
     name: "PayPal",
     ticker: "PYUSD",
-    stablecoin_mcap_m: 2769,
-    company_mcap_m: 53151, // Feb 2026
+    stablecoin_mcap_m: 2779,
+    company_mcap_m: 52748, // Feb 2026
     weight_m: 35000,
     weight_type: "customer_balances",
     category: "Fintech",
@@ -264,9 +264,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 18,
     name: "World Liberty Financial",
     ticker: "USD1",
-    stablecoin_mcap_m: 4007,
+    stablecoin_mcap_m: 4008,
     company_mcap_m: null, // Private, early stage
-    weight_m: 4007,
+    weight_m: 4008,
     weight_type: "stablecoin_mcap",
     category: "Political / DeFi",
     type: "new",
@@ -279,9 +279,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 19,
     name: "Sky (MakerDAO)",
     ticker: "USDS / DAI",
-    stablecoin_mcap_m: 14388,
+    stablecoin_mcap_m: 14374,
     company_mcap_m: 2000, // MKR token mcap
-    weight_m: 14388,
+    weight_m: 14374,
     weight_type: "stablecoin_mcap",
     category: "DeFi",
     type: "incumbent",
