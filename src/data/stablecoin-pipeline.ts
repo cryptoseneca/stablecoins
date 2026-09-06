@@ -22,9 +22,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 1,
     name: "Tether",
     ticker: "USDT",
-    stablecoin_mcap_m: 183402,
+    stablecoin_mcap_m: 183392,
     company_mcap_m: 100000, // Private, estimated from profits
-    weight_m: 183402,
+    weight_m: 183392,
     weight_type: "stablecoin_mcap",
     category: "Incumbent Issuer",
     type: "incumbent",
@@ -36,9 +36,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 2,
     name: "Circle",
     ticker: "USDC",
-    stablecoin_mcap_m: 74600,
+    stablecoin_mcap_m: 74540,
     company_mcap_m: 9000, // IPO valuation
-    weight_m: 74600,
+    weight_m: 74540,
     weight_type: "stablecoin_mcap",
     category: "Incumbent Issuer",
     type: "incumbent",
@@ -81,7 +81,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Barclays",
     ticker: null,
     stablecoin_mcap_m: null,
-    company_mcap_m: 90592,
+    company_mcap_m: 90692,
     weight_m: 650000,
     weight_type: "customer_deposits",
     category: "TradFi",
@@ -165,8 +165,8 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 11,
     name: "PayPal",
     ticker: "PYUSD",
-    stablecoin_mcap_m: 2866,
-    company_mcap_m: 47016, // Feb 2026
+    stablecoin_mcap_m: 2936,
+    company_mcap_m: 47376, // Feb 2026
     weight_m: 35000,
     weight_type: "customer_balances",
     category: "Fintech",
@@ -237,7 +237,7 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     name: "Walmart",
     ticker: null,
     stablecoin_mcap_m: 0,
-    company_mcap_m: 852629, // Hit $1T Feb 2026
+    company_mcap_m: 850022, // Hit $1T Feb 2026
     weight_m: 648000,
     weight_type: "annual_revenue",
     category: "BigTech",
@@ -279,9 +279,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 19,
     name: "Sky (MakerDAO)",
     ticker: "USDS / DAI",
-    stablecoin_mcap_m: 14413,
+    stablecoin_mcap_m: 14427,
     company_mcap_m: 2000, // MKR token mcap
-    weight_m: 14413,
+    weight_m: 14427,
     weight_type: "stablecoin_mcap",
     category: "DeFi",
     type: "incumbent",
@@ -293,9 +293,9 @@ export const PIPELINE_DATA: PipelineEntry[] = [
     rank: 20,
     name: "Ethena",
     ticker: "USDe",
-    stablecoin_mcap_m: 4338,
+    stablecoin_mcap_m: 4351,
     company_mcap_m: 3000, // ENA token mcap
-    weight_m: 4338,
+    weight_m: 4351,
     weight_type: "stablecoin_mcap",
     category: "DeFi",
     type: "new",
